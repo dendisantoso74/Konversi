@@ -9,6 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.Konversi">
+        <activity android:name=".KonversiKecepatan"></activity>
+        <activity android:name=".KonversiArea" />
+        <activity android:name=".KonversiPanjang" />
+        <activity android:name=".KonversiSuhu" />
         <activity android:name=".MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
