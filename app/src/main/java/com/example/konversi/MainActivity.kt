@@ -6,29 +6,40 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Button
 
-class MainActivity : AppCompatActivity(), View.OnClickListener {
+class MainActivity : AppCompatActivity() {
 
     private lateinit var btnIntent: Button
-
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        btnIntent = findViewById(R.id.buttonSuhu)
+        var buttonSuhu = findViewById<Button>(R.id.buttonSuhu)
+        buttonSuhu.setOnClickListener( View.OnClickListener {
+            var intent = Intent (this,KonversiSuhu::class.java)
+            startActivity(intent);
+        })
 
+        var buttonPanjang = findViewById<Button>(R.id.buttonPanjang)
+        buttonPanjang.setOnClickListener( View.OnClickListener {
+            var intent = Intent (this,KonversiPanjang::class.java)
+            startActivity(intent);
+        })
 
-        btnIntent.setOnClickListener(this)
+        var buttonKecepatan = findViewById<Button>(R.id.buttonKecepatan)
+        buttonKecepatan.setOnClickListener( View.OnClickListener {
+            var intent = Intent (this,KonversiKecepatan::class.java)
+            startActivity(intent);
+        })
+
+        var buttonArea = findViewById<Button>(R.id.buttonArea)
+        buttonArea.setOnClickListener( View.OnClickListener {
+            var intent = Intent (this,KonversiArea::class.java)
+            startActivity(intent);
+        })
     }
 
-    override fun onClick(v: View) {
-        when(v.id){
-            R.id.buttonSuhu -> run {
-                val intentsuhu = Intent(this@MainActivity,KonversiSuhu::class.java)
-                startActivity(intentsuhu)
-            }
-        }
 
-    }
+
 
 }
