@@ -27,10 +27,10 @@ class KonversiSuhu : AppCompatActivity() {
 
     fun konversisuhu(view: View?) {
         try {
-            val ncelcius = celcius!!.text.toString().toInt()
-            val nkelvin = ncelcius + 273.15
-            val nfarenheit = 1.8*ncelcius+32
-            val nreamur = 0.8*ncelcius
+            val ncelcius = celcius!!.text.toString().toFloat()
+            val nkelvin = ncelcius + 273.15f
+            val nfarenheit = 1.8f*ncelcius+32f
+            val nreamur = 0.8f*ncelcius
             kelvin!!.setText(nkelvin.toString())
             farenheit!!.setText(nfarenheit.toString())
             reamur!!.setText(nreamur.toString())

@@ -27,10 +27,10 @@ class KonversiKecepatan : AppCompatActivity() {
 
     fun konversikecepatan(view: View?) {
         try {
-            val nkiloperjam = kilometerperjam!!.text.toString().toDouble()
-            val nkiloperdetik = nkiloperjam / 3600.0
-            val nmeterperdetik = nkiloperjam / 3.6
-            val nmilperjam = nkiloperjam / 1.609344
+            val nkiloperjam = kilometerperjam!!.text.toString().toFloat()
+            val nkiloperdetik = nkiloperjam / 3600.0f
+            val nmeterperdetik = nkiloperjam / 3.6f
+            val nmilperjam = nkiloperjam / 1.609344f
             kilometerperdetik!!.setText(nkiloperdetik.toString())
             meterperdetik!!.setText(nmeterperdetik.toString())
             milperjam!!.setText(nmilperjam.toString())

@@ -27,10 +27,10 @@ class KonversiArea : AppCompatActivity() {
 
     fun konversiarea(view: View?) {
         try {
-            val nmeter2 = meter2!!.text.toString().toDouble()
-            val nkilometer2 = nmeter2 / 1000000.0
-            val ncentimeter2 = nmeter2 * 100000.0
-            val nhektar = nmeter2 / 10000.0
+            val nmeter2 = meter2!!.text.toString().toFloat()
+            val nkilometer2 = nmeter2 / 1000000.0f
+            val ncentimeter2 = nmeter2 * 10000.0f
+            val nhektar = nmeter2 / 10000.0f
             kilometer2!!.setText(nkilometer2.toString())
             centimeter2!!.setText(ncentimeter2.toString())
             hektar!!.setText(nhektar.toString())

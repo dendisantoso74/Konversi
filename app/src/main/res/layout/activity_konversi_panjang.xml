@@ -128,7 +128,7 @@
         android:textStyle="normal|bold" />
 
     <Button
-        android:text="EXIT"
+        android:text="KEMBALI"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/btn_exit"

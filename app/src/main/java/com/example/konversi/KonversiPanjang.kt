@@ -27,10 +27,10 @@ class KonversiPanjang : AppCompatActivity() {
 
     fun konversipanjang(view: View?) {
         try {
-            val nmeter = meter!!.text.toString().toDouble()
-            val nkilometer = nmeter / 1000.0
-            val ncentimeter = nmeter * 100.0
-            val nmilimeter = nmeter * 1000.0
+            val nmeter = meter!!.text.toString().toFloat()
+            val nkilometer = nmeter / 1000.0f
+            val ncentimeter = nmeter * 100.0f
+            val nmilimeter = nmeter * 1000.0f
             kilometer!!.setText(nkilometer.toString())
             centimeter!!.setText(ncentimeter.toString())
             milimeter!!.setText(nmilimeter.toString())
